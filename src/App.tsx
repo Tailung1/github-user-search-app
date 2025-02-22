@@ -5,13 +5,13 @@ import "./App.css";
 type TUser = {
     name:string  | null
     login :string | null
-
 }
 
 function App() {
   const [user, setUser] = useState<TUser | null>(null);
 
   const [search,setSearch]=useState<string>("")
+  useEffect(() => setUser({ name: "Tailung1", login: "tailung1" }), []);
 
   const fetchFunc = async () => {
     if(!search.trim()) return;
