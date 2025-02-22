@@ -24,8 +24,8 @@ function App() {
     <>
       <input onChange={(event) => setSearch(event.target.value)} type="text" />
       <button onClick={fetchFunc}>Search user</button>
-      <h1>{user?.name ?? "Loading"}</h1>
-      <h2>{user?.login ?? "Loading"}</h2>
+      <h1>{user?.name ?? "User Name will appear here"}</h1>
+      <h2>{user?.login ?? "User Login will apprear here"}</h2>
     </>
   );
 }
