@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
+interface userData {
+    created_at:string
+}
 export default function App() {
-  const [user, setUser] = useState<string | number>("");
+  const [user, setUser] = useState<userData | null>(null);
 
   useEffect(() => {
     const fetchUser = async () => {
