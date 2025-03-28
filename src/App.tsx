@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 export default function App() {
-  const [user, setUser] = useState<string>("");
+  const [user, setUser] = useState<string | number>("");
 
   useEffect(() => {
     const fetchUser = async () => {
