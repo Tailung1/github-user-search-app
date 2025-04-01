@@ -2,13 +2,13 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 interface userData {
-    created_at:string
+  created_at: string;
 }
 export default function App() {
   const [user, setUser] = useState<userData | null>(null);
 
   useEffect(() => {
-    const fetchUser = async () => {
+    const fetchUserData = async () => {
       const response = await axios.get(
         "https://api.github.com/users/Tailung1"
       );
@@ -17,7 +17,7 @@ export default function App() {
         setUser(data);
       }
     };
-    fetchUser();
+    fetchUserData();
   }, []);
   return <div>{user?.created_at || " cant found"}</div>;
 }
